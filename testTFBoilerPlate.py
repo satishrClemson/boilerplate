@@ -1,5 +1,4 @@
 ################### Tensorflow boilerplate code ########################
-
 import tensorflow as tf
 
 a = tf.constant(4.0,dtype=tf.float32)
@@ -16,6 +15,7 @@ with tf.Session() as sess:
     print(sess.run((vec+1,vec+2))) #has to be a tuple or dictionary inside sess.run()
     print(sess.run(total))
     print(sess.run({'ab':(a,b),'total':total})) #has to be a tuple or dictionary inside sess.run()
+
                     #########################
 x = tf.placeholder(shape=(3,None),dtype=tf.float32)#None is placeholder for any number of cols. 
                                                    #cannot work with tensors of shape=(3,)
